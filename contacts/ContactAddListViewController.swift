@@ -12,19 +12,17 @@ class ContactAddListViewController: UIViewController {
 
     var contact: Contact!
     var contactList: ContactList!
-    
+    //get UIbutton
     @IBOutlet weak var InputTextName: UITextField!
-    
-//    @IBOutlet weak var InputTextPhone: UITextField!
     
     @IBOutlet weak var InputTextPhone: UITextField!
     
     @IBAction func DeleteButton(_ sender: UIButton) {
-       
+        //clear input text
         self.InputTextName.text = ""
         self.InputTextPhone.text = ""
     }
-    
+    //save list
     @IBAction func SaveContactList(_ sender: Any) {
         contactList.saveList()
 
@@ -34,6 +32,7 @@ class ContactAddListViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -41,6 +40,7 @@ class ContactAddListViewController: UIViewController {
         InputTextPhone.text = contact.phone
         
     }
+    //store contact data
     override func viewWillDisappear(_ animated: Bool) {
         contact.title = InputTextName.text!
         contact.phone = InputTextPhone.text!

@@ -8,6 +8,7 @@
 import Foundation
 
 class Contact: NSObject, NSCoding {
+    //set name and phone
     var title: String
     var phone: String
 
@@ -23,7 +24,7 @@ class Contact: NSObject, NSCoding {
         phone = (coder.decodeObject(forKey: "phone") as! String)
 
     }
-    
+    // set init
     init(title:String, phone: String) {
         self.title = title
         self.phone = phone

@@ -19,7 +19,6 @@ class ContactList {
     
     var list = [[Contact]]()
 
-
     init(){
         //set-up sections
         print(contactURL)
@@ -31,7 +30,7 @@ class ContactList {
             print(e.localizedDescription)
         }
     }
-    
+    //save contact list
     func saveList(){
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: list, requiringSecureCoding: false)
@@ -41,11 +40,11 @@ class ContactList {
         }
     }
     
-    
+    //delete contact list
     func deleteContact(indexPath: IndexPath){
         list[indexPath.section].remove(at: indexPath.row)
     }
-    
+    //add contact
     @discardableResult func addContact(title: String, phone: String)-> Contact {
         let contact = Contact(title: title, phone: phone)
         list[1].insert(contact, at: 0)

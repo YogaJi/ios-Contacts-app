@@ -12,14 +12,10 @@ class ContactTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-  
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        //load data
         tableView.reloadData()
     }
     
@@ -81,14 +77,14 @@ class ContactTableViewController: UITableViewController {
     //         Get the new view controller using segue.destination.
     //         Pass the selected object to the new view controller.
             let dst = segue.destination as? ContactAddListViewController
-            
+            //set navigation add
             if(segue.identifier == "add"){
                 let contact = contactList.addContact(title: "", phone: "")
             dst?.contact = contact
             dst?.contactList = contactList
             }
             let dst2 = segue.destination as? ContactDetailViewController
-            
+            //set navigation show list
             if(segue.identifier == "show"){
                 if  let indexPath = tableView.indexPathForSelectedRow {
                     let contact = contactList.list[indexPath.section][indexPath.row]

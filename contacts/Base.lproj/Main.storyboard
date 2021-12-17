@@ -24,6 +24,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="baf-X3-QBP">
                                                 <rect key="frame" x="0.0" y="0.5" width="400" height="199"/>
+                                                <color key="tintColor" systemColor="systemFillColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="FCp-5S-5MV"/>
                                                 </constraints>
@@ -31,7 +32,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiC-Km-dgm">
                                                 <rect key="frame" x="0.0" y="240" width="400" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.1831105026" green="0.1831105026" blue="0.1831105026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2X-Ic-vcS">
@@ -47,6 +48,7 @@
                                                     </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BDM-xZ-kvM">
                                                         <rect key="frame" x="30" y="0.5" width="80" height="38.5"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="1NA-xv-X2G"/>
                                                         </constraints>
@@ -54,8 +56,9 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 000 000000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFd-L1-Zl1">
                                                         <rect key="frame" x="110" y="0.0" width="290" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -80,6 +83,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Edit">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="EditContact:" destination="tw0-Up-uvi" eventType="touchUpInside" id="Qtm-Pt-BLg"/>
@@ -98,6 +102,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Delete">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gL-MT-6VH">
@@ -128,6 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Inw-bF-tCW"/>
                     <connections>
+                        <outlet property="Avatar" destination="baf-X3-QBP" id="nPg-U3-HZ9"/>
                         <outlet property="TextName" destination="qiC-Km-dgm" id="1Yy-rq-Sn7"/>
                         <outlet property="TextPhone" destination="RFd-L1-Zl1" id="bOs-XF-Lc8"/>
                     </connections>
@@ -155,6 +161,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Cx-Ij-f53">
                                         <rect key="frame" x="0.0" y="0.5" width="398" height="239"/>
+                                        <color key="tintColor" systemColor="systemFillColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="SC1-IF-vjf"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="f0u-8v-K78"/>
@@ -174,6 +181,7 @@
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eaw-Z7-kBy">
                                                 <rect key="frame" x="27" y="14.5" width="40" height="36.5"/>
+                                                <color key="tintColor" systemColor="systemBrownColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Ufg-je-6Mi"/>
                                                 </constraints>
@@ -205,6 +213,7 @@
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SRt-sC-2oi">
                                                 <rect key="frame" x="22" y="11.5" width="51" height="36"/>
+                                                <color key="tintColor" systemColor="systemBrownColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="51" id="blP-wZ-iNu"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="fvH-oW-HKw"/>
@@ -270,6 +279,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="C7u-IO-A11">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="JQo-Sz-ucR">
+                            <color key="tintColor" systemColor="systemBrownColor"/>
                             <connections>
                                 <action selector="SaveContactList:" destination="AXF-M1-FDQ" id="mFL-kx-3Qh"/>
                             </connections>
@@ -304,7 +314,7 @@
                                             <rect key="frame" x="20" y="-0.5" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" systemColor="systemBrownColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -321,6 +331,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact List" id="tz2-m4-cDb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ggj-kj-Dv8" userLabel="Right Bar Button Items">
+                            <color key="tintColor" systemColor="systemBrownColor"/>
                             <connections>
                                 <segue destination="AXF-M1-FDQ" kind="show" identifier="add" id="nHK-fi-VMD"/>
                             </connections>
@@ -356,14 +367,26 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
