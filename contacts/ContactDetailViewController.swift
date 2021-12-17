@@ -39,11 +39,14 @@ class ContactDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         TextName.text = contact.title
-//        TextPhone.text = contact.phone
+        TextPhone.text = contact.phone
+//        if let phone = contact.phone {
+//            TextPhone.text = String(phone)
+//        }
     }
     override func viewWillDisappear(_ animated: Bool) {
         contact.title = TextName.text!
-//        contact.phone = TextPhone.text!
+        contact.phone = TextPhone.text!
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dst3 = segue.destination as! ContactAddListViewController

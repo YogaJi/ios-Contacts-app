@@ -25,11 +25,17 @@ class ContactAddListViewController: UIViewController {
     
 //    @IBOutlet weak var InputTextPhone: UITextField!
     
+    @IBOutlet weak var InputTextPhone: UITextField!
+    
     @IBAction func DeleteButton(_ sender: UIButton) {
+       
+        self.InputTextName.text = ""
+        self.InputTextPhone.text = ""
     }
     
     @IBAction func SaveContactList(_ sender: Any) {
         contactList.saveList()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +46,15 @@ class ContactAddListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         InputTextName.text = contact.title
-//        InputTextPhone.text = contact.phone
-    
+        InputTextPhone.text = contact.phone
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         contact.title = InputTextName.text!
-//        contact.phone = InputTextPhone.text!
+//        contact.phone = (Int(InputTextPhone.text!))
+        contact.phone = InputTextPhone.text!
+//        contact.setPhone(phones: InputTextPhone.text!)
+//        contactList.addContact(title: contact.title, phone: contact.phone)
     }
       
 }

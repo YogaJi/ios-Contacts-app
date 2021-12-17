@@ -9,40 +9,8 @@ class ContactTableViewController: UITableViewController {
     
     var contactList: ContactList!
     
-    @IBAction func add(_ sender: UIBarButtonItem) {
-//        print("add")
-        let listOfContacts = [
-        "feed the dog",
-            "go shopping",
-        "go hiking",
-        "bye bike",
-        "mow the lawn"]
-        contactList.addContact(title: listOfContacts[Int.random(in: 0...4)])
-//        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.reloadData()
-//        tableView.insertRows(at: [indexPath], with: .top)
-    }
-    
-//    @IBAction func toggleEditingMode(_ sender: UIButton) {
-//        if isEditing{
-//            //end editing mode
-//            //change button title from Done to Edit
-//            sender.setTitle("Edit", for: .normal)
-//            //turn off editting mdoe
-//            setEditing(false, animated: true)
-//        } else {
-//            //start editting mode
-//            //change button title from edit to done
-//            sender.setTitle("done", for: .normal)
-//            //turn off editing mode
-//            setEditing(true, animated: true)
-//        }
-//        print("abc")
-//    }
 
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,7 +20,12 @@ class ContactTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,18 +43,9 @@ class ContactTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
 
         // Configure the cell...
-//        let contact = contactList.list[indexPath.section][indexPath.row]
-//
-//
-//        if(contact.isComplete){
-//            let title = NSAttributedString(string: contact.title, attributes:
-//                [.strikethroughColor: UIColor.gray,
-//                 .strikethroughStyle:2,
-//                 .strokeColor: UIColor.gray])
-//            cell.textLabel?.attributedText = title
-//        }else{
-//            cell.textLabel?.attributedText = NSAttributedString(string: contact.title)
-//        }
+        let contact = contactList.list[indexPath.section][indexPath.row]
+        cell.textLabel?.attributedText = NSAttributedString(string: contact.title)
+//        cell.detailTextLabel?.attributedText = NSAttributedString(string: contact.phone)
         return cell
     }
 
@@ -131,26 +95,26 @@ class ContactTableViewController: UITableViewController {
 
         tableView.reloadData()
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
-
-        var header: String?
-        
-        switch section {
-            case 0:
-                header = "Favourites"
-            case 1:
-                header = "Contacts"
-            case 2:
-                header = "Completed"
-            default:
-                header = nil
-            }
-        if contactList.list[section].count == 0{
-            header = nil
-        }
-            return header
-        
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+//
+//        var header: String?
+//
+//        switch section {
+//            case 0:
+//                header = "Favourites"
+//            case 1:
+//                header = "Contacts"
+//            case 2:
+//                header = "Completed"
+//            default:
+//                header = nil
+//            }
+//        if contactList.list[section].count == 0{
+//            header = nil
+//        }
+//            return header
+//
+//    }
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -172,7 +136,7 @@ class ContactTableViewController: UITableViewController {
             
             if(segue.identifier == "add"){
 //                let contact = Contact(title:"")
-            let contact = contactList.addContact(title: "")
+                let contact = contactList.addContact(title: "", phone: "")
             dst?.contact = contact
             dst?.contactList = contactList
             }
