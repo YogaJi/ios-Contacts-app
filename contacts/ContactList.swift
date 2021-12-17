@@ -14,7 +14,7 @@ class ContactList {
         let documentDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         //get the document:
         var documentDirectory = documentDirectories.first!
-        return documentDirectory.appendingPathComponent("contact20.archive")
+        return documentDirectory.appendingPathComponent("contact21.archive")
     }()
     
     var list = [[Contact]]()
@@ -23,10 +23,6 @@ class ContactList {
     init(){
         //set-up sections
         print(contactURL)
-//        
-        list.append([])
-        list.append([])
-        list.append([])
         
         do{
             let data = try Data(contentsOf: contactURL)
@@ -48,7 +44,6 @@ class ContactList {
     
     func deleteContact(indexPath: IndexPath){
         list[indexPath.section].remove(at: indexPath.row)
-//        list.remove(at: indexPath.row)
     }
     
     @discardableResult func addContact(title: String, phone: String)-> Contact {
@@ -59,22 +54,4 @@ class ContactList {
     }
 
     
-    func moveContact(fromIndexPath: IndexPath, toIndexPath: IndexPath){
-        let tmp = list[fromIndexPath.section][fromIndexPath.row]
-        list[fromIndexPath.section].remove(at: fromIndexPath.row)
-        list[fromIndexPath.section].insert(tmp, at: toIndexPath.row)
-    }
-    func moveToCompleted(fromIndexPath: IndexPath){
-        let tmp = list[fromIndexPath.section][fromIndexPath.row]
-        list[fromIndexPath.section].remove(at: fromIndexPath.row)
-        
-        list[2].append(tmp)
-    }
-    
-    func moveToNormal(fromIndexPath: IndexPath){
-        let tmp = list[fromIndexPath.section][fromIndexPath.row]
-        list[fromIndexPath.section].remove(at: fromIndexPath.row)
-        
-        list[1].append(tmp)
-    }
 }

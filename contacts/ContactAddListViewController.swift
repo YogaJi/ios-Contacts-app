@@ -13,14 +13,6 @@ class ContactAddListViewController: UIViewController {
     var contact: Contact!
     var contactList: ContactList!
     
-//    @IBOutlet weak var Labeltitle: UILabel!
-//
-//    @IBOutlet weak var textField: UITextField!
-//
-//    @IBAction func saveContactList(_ sender: Any) {
-//        contactList.saveList()
-//    }
-    
     @IBOutlet weak var InputTextName: UITextField!
     
 //    @IBOutlet weak var InputTextPhone: UITextField!
@@ -51,10 +43,8 @@ class ContactAddListViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         contact.title = InputTextName.text!
-//        contact.phone = (Int(InputTextPhone.text!))
         contact.phone = InputTextPhone.text!
-//        contact.setPhone(phones: InputTextPhone.text!)
-//        contactList.addContact(title: contact.title, phone: contact.phone)
+
     }
       
 }

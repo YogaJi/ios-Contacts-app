@@ -20,9 +20,7 @@ class Contact: NSObject, NSCoding {
     required init? (coder: NSCoder){
        
         title = coder.decodeObject(forKey: "title") as! String
-
         phone = (coder.decodeObject(forKey: "phone") as! String)
-//        phone = (coder.decodeObject(forKey: "phone") as! Int)
 
     }
     
@@ -35,8 +33,5 @@ class Contact: NSObject, NSCoding {
     func setName(title: String){
         self.title = title
     }
-    
-//    func setPhone(phones: Int?){
-//        phone = phones
-//    }
+
 }

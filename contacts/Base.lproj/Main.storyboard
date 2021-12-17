@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="112" translatesAutoresizingMaskIntoConstraints="NO" id="qCt-1i-yK8">
-                                <rect key="frame" x="7" y="88" width="400" height="546"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="qCt-1i-yK8">
+                                <rect key="frame" x="7" y="88" width="400" height="489"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xLH-f8-cuA">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="374"/>
@@ -65,7 +65,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRQ-MV-90W">
-                                        <rect key="frame" x="0.0" y="486" width="400" height="60"/>
+                                        <rect key="frame" x="0.0" y="429" width="400" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVm-m3-Yoq">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="60"/>
@@ -122,6 +122,7 @@
                         <viewLayoutGuide key="safeArea" id="2hO-qg-Pv6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qCt-1i-yK8" firstAttribute="top" secondItem="2hO-qg-Pv6" secondAttribute="top" id="jOV-kb-5op"/>
                             <constraint firstItem="qCt-1i-yK8" firstAttribute="centerX" secondItem="whO-jM-Glt" secondAttribute="centerX" id="tHw-Zn-4IX"/>
                         </constraints>
                     </view>
@@ -268,7 +269,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C7u-IO-A11">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="JQo-Sz-ucR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JQo-Sz-ucR">
                             <connections>
                                 <action selector="SaveContactList:" destination="AXF-M1-FDQ" id="mFL-kx-3Qh"/>
                             </connections>
@@ -299,10 +300,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="31q-Q0-6mY">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="31q-Q0-6mY">
                                             <rect key="frame" x="20" y="-0.5" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -328,7 +329,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qB-hI-h5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="70"/>
+            <point key="canvasLocation" x="11.594202898550726" y="69.642857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rfu-dD-f2k">
@@ -348,7 +349,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nHK-fi-VMD"/>
+        <segue reference="p2V-Ab-DLr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>

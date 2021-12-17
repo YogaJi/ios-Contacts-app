@@ -12,13 +12,6 @@ class ContactDetailViewController: UIViewController {
     var contact: Contact!
     var contactList: ContactList!
     
-//    @IBOutlet weak var Labeltitle: UILabel!
-//
-//    @IBOutlet weak var textField: UITextField!
-//
-//    @IBAction func saveContactList(_ sender: Any) {
-//        contactList.saveList()
-//    }
     @IBOutlet weak var TextName: UILabel!
     
     @IBOutlet weak var TextPhone: UILabel!
@@ -26,10 +19,6 @@ class ContactDetailViewController: UIViewController {
     @IBAction func EditContact(_ sender: Any) {
     }
     
-//    @IBAction func DeleteContact(_ sender: Any) {
-//        contactList.deleteContact(indexPath: <#IndexPath#>)
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,9 +29,7 @@ class ContactDetailViewController: UIViewController {
         
         TextName.text = contact.title
         TextPhone.text = contact.phone
-//        if let phone = contact.phone {
-//            TextPhone.text = String(phone)
-//        }
+
     }
     override func viewWillDisappear(_ animated: Bool) {
         contact.title = TextName.text!
@@ -52,7 +39,6 @@ class ContactDetailViewController: UIViewController {
         let dst3 = segue.destination as! ContactAddListViewController
         if(segue.identifier == "edit"){
       
-//            let contact = contactList.list[indexPath.section][indexPath.row]
             dst3.contact = contact
             dst3.contactList = contactList
         
